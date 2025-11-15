@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import Profile from "./Profile";
+import Profile from "./Profile.js";
 
 const updateLogSchema = new mongoose.Schema({
   updatedBy: {

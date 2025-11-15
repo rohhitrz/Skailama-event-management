@@ -1,10 +1,10 @@
 import Event from "../models/Event.js";
 import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-import timezone from dayjs / plugin / timezone
+import utc from "dayjs/plugin/utc.js";
+import timezone from "dayjs/plugin/timezone.js";
 
 dayjs.extend(utc)
-dayjs.extend(timezonePlugin)
+dayjs.extend(timezone)
 
 export const createEvent = async (req, res) => {
     try {

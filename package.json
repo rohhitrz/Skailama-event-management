@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "server": "node server/index.js",
     "client": "cd client && npm start",
@@ -30,6 +30,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dayjs": "^1.11.19",
+    "dayjs-plugin-utc": "^0.1.2",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "mongoose": "^8.19.3"
