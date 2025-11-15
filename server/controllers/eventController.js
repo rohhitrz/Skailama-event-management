@@ -84,6 +84,8 @@ export const getEventById = async (req, res) => {
         if (!event) {
             return res.status(404).json({ error: "Event not found" })
         }
+        
+        res.json(event);
     } catch (error) {
         return res.status(500).json({ error: error.message })
     }
