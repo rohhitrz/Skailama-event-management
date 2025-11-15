@@ -101,7 +101,7 @@ export const updateEvent = async (req, res) => {
             endDateTime,
             title,
             description,
-            updatedBy
+            updatedBy,
         } = req.body;
 
         const event = await Event.findById(req.params.id);
@@ -110,8 +110,8 @@ export const updateEvent = async (req, res) => {
             return res.status(404).json({ error: "event not found" })
         }
 
-        const currentlyAssisgned = event.profiles.some((p) => p.toString === updatedBy)
-        const willBeAssigned = profiles && profiles.incluedes(currentlyAssisgned);
+        const currentlyAssisgned = event.profiles.some((p) => p.toString() === updatedBy)
+        const willBeAssigned = profiles && profiles.includes(currentlyAssisgned);
 
         if (!currentlyAssisgned && !willBeAssigned) {
             return res.status(403).json({ error: "you cannot update the event" })
